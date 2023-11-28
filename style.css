@@ -1,0 +1,116 @@
+:root {
+    --darkTheme: black;
+    --lightTheme: rgb(26, 26, 26);
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--darkTheme);
+    color: white;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    margin-top: 2%;
+    flex-direction: column;
+  }
+nav {
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    float: inline-end;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+.banner {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url(darkbg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    overflow: hidden;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    float: inline-end;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.card {
+    flex: 1 0 3;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    width: 25%;
+    justify-content: space-between;
+    min-width: 256px;
+  }
+  
+  .card header {
+    padding: 20px;
+    background: #13293d;
+    color: #fff;
+  }
+  
+  .card img {
+    width: 100%;
+    
+  }
+
+  .card:hover img {
+    filter: brightness(1.5);
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main,
+    nav, .cards,  {
+      flex-direction: column;
+    }
+    /* Change the header background
+    header {
+      background: #772014;
+    } */
+    /* Change the navbar and footer background */
+    /* nav,
+    footer {
+      background-color: #bb8588;
+    } */
+  }
